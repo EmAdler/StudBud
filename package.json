@@ -4,7 +4,10 @@
   "description": "study tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,10 @@
   },
   "homepage": "https://github.com/EmAdler/StudBud#readme",
   "devDependencies": {
-    "parcel": "^2.5.0"
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "autoprefixer": "^10.2.5",
+    "parcel": "^2.5.0",
+    "postcss": "^8.2.13"
   },
   "dependencies": {
     "sass": "^1.51.0"
