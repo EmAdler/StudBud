@@ -1,7 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather:400,700";
 .app-container {
-  text-align: center;
-  background-color: #ffc8c8;
+  background-color: #fff;
   margin: 4em;
 }
 
