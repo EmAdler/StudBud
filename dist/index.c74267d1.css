@@ -2,6 +2,7 @@
 .app-container {
   background-color: #fff;
   margin: 4em;
+  font-family: Raleway, sans-serif;
 }
 
 html {
@@ -50,6 +51,44 @@ h5 {
 
 small, .text_small {
   font-size: .8rem;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+  display: flex;
+}
+
+nav img {
+  width: 300px;
+  border-radius: 6px;
+}
+
+.nav-links {
+  text-align: right;
+  flex: 1;
+}
+
+.nav-links ul li {
+  padding: 8px 12px;
+  list-style: none;
+  display: inline;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+nav .highlight, nav .current a, a:hover {
+  font-weight: bold;
+}
+
+nav .fa {
+  display: none;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */
