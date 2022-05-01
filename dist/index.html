@@ -42,9 +42,25 @@
         <h1>Page 3</h1>
     </div>
 
+
     <form id="taskform">
         <label for="task">Task:</label>
         <input type="text" name="task" id="taskInput">
+        <br>
+        <!--date input-->
+        <label for="dueDate">Due Date:</label>
+        <input type="date" name="dueDate" id="dueDateInput">
+        <br>
+        <!--time input-->
+        <label for="completionTime">Completion Time:</label>
+        <input type="time" name="completionTime" id="completionTimeInput">
+        <br>
+        <label for="estimatedTime">Estimated Completion Time (in mins):</label>
+        <input type="number" name="estimatedTime" id="estimatedTimeInput">
+        <br>
+       
+        <!--button input-->  
+        
         <button type="submit">Submit</button>
     </form>
     <ul id="tasklist"></ul>

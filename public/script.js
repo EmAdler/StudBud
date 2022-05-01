@@ -1,29 +1,33 @@
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button")
-let input = document.getElementById("taskInput");
+let taskInput = document.getElementById("taskInput");
+let dueDateInput = document.getElementById("dueDateInput");
+let completionTimeInput = document.getElementById("completionTimeInput");
+let estimatedTimeInput = document.getElementById("estimatedTimeInput");
 
 button.addEventListener("click", function(event){
-let task = input.value;
-addTask(task, "26/10/2021","low", ["1","30"], false);
+    event.preventDefault();
+let task = taskInput.value;
+let dueDate = dueDateInput.value;
+let completionTime = completionTimeInput.value;
+let estimatedTime = estimatedTimeInput.value
+addTask(task, dueDate, estimatedTime, completionTime, false);
 console.log(taskList);
 })
 
 let taskList = [];
 
-function addTask(taskDescription, dueDate, prioirtyRating, estimatedTime, completionStatus){
-    let minEstTime = estimatedTime[0];
-    let maxEstTime = estimatedTime[1];
+function addTask(taskDescription, dueDate, estimatedTime, completionTime, completionStatus){
     let d = new Date();
     let dateCreated = d.getFullYear();
     let task = {
         taskDescription,
         dueDate,
-        dateCreated,
-        prioirtyRating,
         estimatedTime,
-        minEstTime,
-        maxEstTime,
-        completionStatus
+        dateCreated,
+        completionTime,
+        completionStatus,
+        
     };
 
     taskList.push(task);
