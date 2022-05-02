@@ -1,0 +1,20 @@
+.button-1{
+    background-color: #63B891;
+    color: white;
+    border: 1px solid white; 
+    display: inline-block;
+    width: 200px;
+    padding-top: 1%;
+    padding-bottom:1%;
+    border-radius: 6px;
+    font-size: 17px;
+    position:relative;
+    cursor: pointer;
+     margin-top: 3%;
+    transition: ease-out 0.2s;
+    
+  }
+  .button-1:hover{
+  box-shadow: inset 200px 0 0 0 #1A1818;
+  }
+  

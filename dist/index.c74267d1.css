@@ -151,4 +151,24 @@ nav.vertical .nav-links .nav-item a {
   grid-area: tasklist;
 }
 
+.button-1 {
+  color: #fff;
+  width: 200px;
+  cursor: pointer;
+  background-color: #63b891;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin-top: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-size: 17px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+.button-1:hover {
+  box-shadow: inset 200px 0 #1a1818;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
