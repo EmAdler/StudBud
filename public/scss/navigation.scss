@@ -1,51 +1,41 @@
-/*NAV BAR */
-/* Same across all pages*/
-nav{
-    /*flex = respsonsive */
+nav {
+    width: 100%;
+    background-color: #123;
     display: flex;
-    /* padding = look centered in the div*/
-    padding: 2% 6%;
-    /* jsutify-content = even gap when being responsive*/
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-  }
-  /* LOGO - which sits in the nav section */
-  nav img{
-    width: 300px;
-    border-radius:6px;
-  }
-  /* links = each page */
-   .nav-links{
-    flex: 1;
-    text-align: right;
-  }
-  /* links look e.g. changing from list to looking normal/professional*/
-   .nav-links ul li{
-    list-style: none;
-    display: inline;
-    padding: 8px 12px;
-    position: relative;
-  
-  }
-  /* The current page styling e.g. size = bigger*/
-  .nav-links ul li a{
-    color: black;
-    font-size: 16px;
-    text-decoration:none;
-  }
-  
-  
-  nav .highlight, nav .current a{
-     font-weight:bold;
-  }
-  
-  /* when the pages are hovered over the font weight increases*/
-  
-  a:hover {
-   font-weight:bold;
-  }
-  
-  /* Nav bar icons are not displayed unless the media quirey is used*/
-  nav .fa{
-    display: none;
-  }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        .nav-item a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 1em 2em;
+            &:hover {
+                color: #abc;
+            }
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+nav.vertical {
+    width: 120px;
+    height: 100vh;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .nav-links {
+        flex-direction: column;
+        .nav-item a {
+            display: block;
+            padding: 4em 0;
+            
+        }
+    }
+
+}
