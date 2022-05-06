@@ -36,6 +36,14 @@ img {
   text-align: left;
 }
 
+footer {
+  color: #fff;
+  background-color: #19aabd;
+  border-top: 2px solid #585858;
+  border-bottom: 2px solid #585858;
+  padding: 2%;
+}
+
 html {
   font-size: 100%;
 }

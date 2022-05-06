@@ -1,3 +1,4 @@
+/////TASK LIST//////
 // Basic form DOM elements
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button");
@@ -77,6 +78,6 @@ function removeItemFromArray(arr, index) {
 function updateEmpty() {
     if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
     else document.getElementById('emptyList').style.display = 'block';
-}
+} /////LOCAL STORAGE//////
 
 //# sourceMappingURL=index.f3bd186e.js.map

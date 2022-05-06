@@ -1,3 +1,7 @@
+
+
+/////TASK LIST//////
+
 // Basic form DOM elements
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button")
@@ -100,3 +104,6 @@ function updateEmpty() {
         document.getElementById('emptyList').style.display = 'block';
     }
 }
+
+
+/////LOCAL STORAGE//////
