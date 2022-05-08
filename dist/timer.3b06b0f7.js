@@ -529,6 +529,10 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _tasklist = require("./tasklist");
 var _tasklistDefault = parcelHelpers.interopDefault(_tasklist);
+var _dictionary = require("./dictionary");
+var _dictionaryDefault = parcelHelpers.interopDefault(_dictionary);
+let dictionary = new _dictionaryDefault.default();
+dictionary.printtoconsole();
 var taskList = new _tasklistDefault.default();
 taskList.printtoconsole();
 // Basic form DOM elements
@@ -612,7 +616,7 @@ function updateEmpty() {
     else document.getElementById('emptyList').style.display = 'block';
 }
 
-},{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iXFtG":[function(require,module,exports) {
+},{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx"}],"iXFtG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class Tasklist {
@@ -652,6 +656,16 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire60da")
+},{}],"cRpLx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Dictionary {
+    printtoconsole() {
+        console.log('thisisfromthedictionary');
+    }
+}
+exports.default = Dictionary;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire60da")
 
 //# sourceMappingURL=timer.3b06b0f7.js.map
