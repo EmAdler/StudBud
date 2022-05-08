@@ -1,7 +1,6 @@
 import Tasklist from "./tasklist";
 import Dictionary from "./dictionary";
-let dictionary = new Dictionary();
-dictionary.printtoconsole();
+
 
 
 var taskList = new Tasklist();

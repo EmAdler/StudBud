@@ -531,8 +531,6 @@ var _tasklist = require("./tasklist");
 var _tasklistDefault = parcelHelpers.interopDefault(_tasklist);
 var _dictionary = require("./dictionary");
 var _dictionaryDefault = parcelHelpers.interopDefault(_dictionary);
-let dictionary = new _dictionaryDefault.default();
-dictionary.printtoconsole();
 var taskList = new _tasklistDefault.default();
 taskList.printtoconsole();
 // Basic form DOM elements
@@ -659,10 +657,30 @@ exports.export = function(dest, destName, get) {
 },{}],"cRpLx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+//input field
+let text = document.querySelector("#text");
+//search button
+let search = document.querySelector("#search");
+//main content 
+let data = document.querySelector("#data");
+let loadData = ()=>{
+    //api for dicitonary
+    let api = 'https://api.dictionaryapi.dev/api/v2/entries/en/${text.value}';
+    fetch(api).then((response)=>response.json()
+    ).then((result)=>{
+        //display results
+        //data.innerHTML = 'div class = "details">
+        //<h5 class = "meaning">WORD</h5>
+        //<p>Lorem ipsum dolor, sit amet consectetur a</p>';
+        console.log(result);
+    });
+};
+search.addEventListener("click", ()=>{
+    if (text.value != "") //run function
+    loadData();
+});
+///////UP TO 27:27 of vid (API not linking to page)
 class Dictionary {
-    printtoconsole() {
-        console.log('thisisfromthedictionary');
-    }
 }
 exports.default = Dictionary;
 
