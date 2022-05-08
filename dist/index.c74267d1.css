@@ -25,7 +25,7 @@ img {
 
 .app-container {
   background-color: #fff;
-  padding-left: 120px;
+  padding-left: 15%;
 }
 
 .page-container {
@@ -94,9 +94,11 @@ small, .text_small {
 
 nav {
   width: 100%;
+  text-align: center;
   background-color: #123;
   justify-content: space-around;
   align-items: center;
+  padding-top: 10%;
   display: flex;
 }
 

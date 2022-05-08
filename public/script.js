@@ -1,6 +1,8 @@
+import Tasklist from "./tasklist";
 
+var taskList = new Tasklist();
+taskList.printtoconsole();
 
-/////TASK LIST//////
 
 // Basic form DOM elements
 const form = document.getElementById("taskform");
@@ -104,6 +106,3 @@ function updateEmpty() {
         document.getElementById('emptyList').style.display = 'block';
     }
 }
-
-
-/////LOCAL STORAGE//////
