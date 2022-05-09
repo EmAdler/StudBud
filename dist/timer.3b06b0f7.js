@@ -614,53 +614,7 @@ function removeItemFromArray(arr, index) {
 function updateEmpty() {
     if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
     else document.getElementById('emptyList').style.display = 'block';
-}
-//TIMER
-let [milliseconds, seconds, minutes, hours] = [
-    0,
-    0,
-    0,
-    0
-];
-let timerRef = document.querySelector('.timerDisplay');
-let int = null;
-document.getElementById('startTimer').addEventListener('click', ()=>{
-    if (int !== null) clearInterval(int);
-    int = setInterval(displayTimer, 10);
-});
-document.getElementById('pauseTimer').addEventListener('click', ()=>{
-    clearInterval(int);
-});
-document.getElementById('resetTimer').addEventListener('click', ()=>{
-    clearInterval(int);
-    [milliseconds, seconds, minutes, hours] = [
-        0,
-        0,
-        0,
-        0
-    ];
-    timerRef.innerHTML = '00 : 00 : 00 : 000 ';
-});
-function displayTimer() {
-    milliseconds += 10;
-    if (milliseconds == 1000) {
-        milliseconds = 0;
-        seconds++;
-        if (seconds == 60) {
-            seconds = 0;
-            minutes++;
-            if (minutes == 60) {
-                minutes = 0;
-                hours++;
-            }
-        }
-    }
-    let h = hours < 10 ? "0" + hours : hours;
-    let m = minutes < 10 ? "0" + minutes : minutes;
-    let s = seconds < 10 ? "0" + seconds : seconds;
-    let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
-    timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
-}
+} ///////dictionary////////////
 
 },{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx","./timer":"68qQu"}],"iXFtG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -705,29 +659,40 @@ exports.export = function(dest, destName, get) {
 },{}],"cRpLx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//input field
-let text = document.querySelector("#text");
-//search button
-let search = document.querySelector("#search");
-//main content 
-let data = document.querySelector("#data");
-let loadData = ()=>{
-    //api for dicitonary
-    let api = 'https://api.dictionaryapi.dev/api/v2/entries/en/${text.value}';
-    fetch(api).then((response)=>response.json()
-    ).then((result)=>{
-        //display results
-        //data.innerHTML = 'div class = "details">
-        //<h5 class = "meaning">WORD</h5>
-        //<p>Lorem ipsum dolor, sit amet consectetur a</p>';
-        console.log(result);
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+const result = document.getElementById("result");
+const sound = document.getElementById("sound");
+const btn = document.getElementById("search-btn");
+btn.addEventListener("click", ()=>{
+    let inpWord = document.getElementById("inp-word").value;
+    fetch(`${url}${inpWord}`).then((response)=>response.json()
+    ).then((data)=>{
+        console.log(data);
+        result.innerHTML = `
+            <div class="word">
+                    <h3>${inpWord}</h3>
+                    <button onclick="playSound()">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+                <div class="details">
+                    <p>${data[0].meanings[0].partOfSpeech}</p>
+                    <p>/${data[0].phonetic}/</p>
+                </div>
+                <p class="word-meaning">
+                   ${data[0].meanings[0].definitions[0].definition}
+                </p>
+                <p class="word-example">
+                    ${data[0].meanings[0].definitions[0].example || ""}
+                </p>`;
+        sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
+    }).catch(()=>{
+        result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
     });
-};
-search.addEventListener("click", ()=>{
-    if (text.value != "") //run function
-    loadData();
 });
-///////UP TO 27:27 of vid (API not linking to page)
+function playSound() {
+    sound.play();
+}
 class Dictionary {
 }
 exports.default = Dictionary;
