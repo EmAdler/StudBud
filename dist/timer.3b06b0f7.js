@@ -531,6 +531,8 @@ var _tasklist = require("./tasklist");
 var _tasklistDefault = parcelHelpers.interopDefault(_tasklist);
 var _dictionary = require("./dictionary");
 var _dictionaryDefault = parcelHelpers.interopDefault(_dictionary);
+var _timer = require("./timer");
+var _timerDefault = parcelHelpers.interopDefault(_timer);
 var taskList = new _tasklistDefault.default();
 taskList.printtoconsole();
 // Basic form DOM elements
@@ -613,8 +615,54 @@ function updateEmpty() {
     if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
     else document.getElementById('emptyList').style.display = 'block';
 }
+//TIMER
+let [milliseconds, seconds, minutes, hours] = [
+    0,
+    0,
+    0,
+    0
+];
+let timerRef = document.querySelector('.timerDisplay');
+let int = null;
+document.getElementById('startTimer').addEventListener('click', ()=>{
+    if (int !== null) clearInterval(int);
+    int = setInterval(displayTimer, 10);
+});
+document.getElementById('pauseTimer').addEventListener('click', ()=>{
+    clearInterval(int);
+});
+document.getElementById('resetTimer').addEventListener('click', ()=>{
+    clearInterval(int);
+    [milliseconds, seconds, minutes, hours] = [
+        0,
+        0,
+        0,
+        0
+    ];
+    timerRef.innerHTML = '00 : 00 : 00 : 000 ';
+});
+function displayTimer() {
+    milliseconds += 10;
+    if (milliseconds == 1000) {
+        milliseconds = 0;
+        seconds++;
+        if (seconds == 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes == 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+    }
+    let h = hours < 10 ? "0" + hours : hours;
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+    let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+    timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+}
 
-},{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx"}],"iXFtG":[function(require,module,exports) {
+},{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx","./timer":"68qQu"}],"iXFtG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class Tasklist {
@@ -683,6 +731,13 @@ search.addEventListener("click", ()=>{
 class Dictionary {
 }
 exports.default = Dictionary;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"68qQu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Timer {
+}
+exports.default = Timer;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire60da")
 
