@@ -614,7 +614,8 @@ function removeItemFromArray(arr, index) {
 function updateEmpty() {
     if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
     else document.getElementById('emptyList').style.display = 'block';
-} ///////dictionary////////////
+} ///////dictionary - IN dictionary.js////////////
+ /////////timer///////////
 
 },{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx","./timer":"68qQu"}],"iXFtG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -661,7 +662,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
-const sound = document.getElementById("sound");
 const btn = document.getElementById("search-btn");
 btn.addEventListener("click", ()=>{
     let inpWord = document.getElementById("inp-word").value;
@@ -671,9 +671,7 @@ btn.addEventListener("click", ()=>{
         result.innerHTML = `
             <div class="word">
                     <h3>${inpWord}</h3>
-                    <button onclick="playSound()">
-                        <i class="fas fa-volume-up"></i>
-                    </button>
+                    
                 </div>
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
@@ -685,14 +683,10 @@ btn.addEventListener("click", ()=>{
                 <p class="word-example">
                     ${data[0].meanings[0].definitions[0].example || ""}
                 </p>`;
-        sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
     }).catch(()=>{
         result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
     });
 });
-function playSound() {
-    sound.play();
-}
 class Dictionary {
 }
 exports.default = Dictionary;
@@ -700,6 +694,49 @@ exports.default = Dictionary;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"68qQu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+const timer = document.getElementById('stopwatch');
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+function startTimer() {
+    if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+    if (stoptime == false) stoptime = true;
+}
+function timerCycle() {
+    if (stoptime == false) {
+        sec = parseInt(sec);
+        min = parseInt(min);
+        hr = parseInt(hr);
+        sec = sec + 1;
+        if (sec == 60) {
+            min = min + 1;
+            sec = 0;
+        }
+        if (min == 60) {
+            hr = hr + 1;
+            min = 0;
+            sec = 0;
+        }
+        if (sec < 10 || sec == 0) sec = '0' + sec;
+        if (min < 10 || min == 0) min = '0' + min;
+        if (hr < 10 || hr == 0) hr = '0' + hr;
+        timer.innerHTML = hr + ':' + min + ':' + sec;
+        setTimeout("timerCycle()", 1000);
+    }
+}
+function resetTimer() {
+    timer.innerHTML = '00:00:00';
+    stoptime = true;
+    hr = 0;
+    sec = 0;
+    min = 0;
+}
 class Timer {
 }
 exports.default = Timer;
