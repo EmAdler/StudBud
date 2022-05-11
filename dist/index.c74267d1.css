@@ -93,51 +93,41 @@ small, .text_small {
 }
 
 nav {
-  width: 100%;
-  text-align: center;
-  background-color: #123;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 10%;
+  padding: 2% 6%;
   display: flex;
 }
 
-nav .nav-links {
+nav img {
+  width: 300px;
+  border-radius: 6px;
+}
+
+.nav-links {
+  text-align: right;
+  flex: 1;
+}
+
+.nav-links ul li {
+  padding: 8px 12px;
   list-style: none;
-  display: flex;
+  display: inline;
+  position: relative;
 }
 
-nav .nav-links .nav-item a {
-  color: #fff;
-  padding: 1em 2em;
+.nav-links ul li a {
+  color: #000;
+  font-size: 16px;
   text-decoration: none;
-  display: inline-block;
 }
 
-nav .nav-links .nav-item a:hover {
-  color: #abc;
-}
-
-nav .nav-links .nav-item a.active {
+nav .highlight, nav .current a, a:hover {
   font-weight: bold;
 }
 
-nav.vertical {
-  width: 120px;
-  height: 100vh;
-  flex-direction: row;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-nav.vertical .nav-links {
-  flex-direction: column;
-}
-
-nav.vertical .nav-links .nav-item a {
-  padding: 4em 0;
-  display: block;
+nav .fa {
+  display: none;
 }
 
 #task-grid {

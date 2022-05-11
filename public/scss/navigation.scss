@@ -1,43 +1,51 @@
-nav {
-    width: 100%;
-    background-color: #123;
+
+
+
+  /*NAV BAR */
+
+  nav{
     display: flex;
-    justify-content: space-around;
+    padding: 2% 6%;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding-top: 10%;
-    .nav-links {
-        list-style: none;
-        display: flex;
-        .nav-item a {
-            display: inline-block;
-            text-decoration: none;
-            color: white;
-            padding: 1em 2em;
-            &:hover {
-                color: #abc;
-            }
-            &.active {
-                font-weight: bold;
-            }
-        }
-    }
-}
-
-nav.vertical {
-    width: 120px;
-    height: 100vh;
-    flex-direction: row;
-    position: absolute;
-    left: 0;
-    top: 0;
-    .nav-links {
-        flex-direction: column;
-        .nav-item a {
-            display: block;
-            padding: 4em 0;
-            
-        }
-    }
-
-}
+  }
+  nav img{
+    width: 300px;
+    border-radius:6px;
+  }
+ 
+   .nav-links{
+    flex: 1;
+    text-align: right;
+  }
+  
+   .nav-links ul li{
+    list-style: none;
+    display: inline;
+    padding: 8px 12px;
+    position: relative;
+  
+  }
+  
+  .nav-links ul li a{
+    color: black;
+    font-size: 16px;
+    text-decoration:none;
+  }
+  
+  
+  nav .highlight, nav .current a{
+     font-weight:bold;
+  }
+  
+  /* when the pages are hovered over the font weight increases*/
+  
+  a:hover {
+   font-weight:bold;
+  }
+  
+  /* Nav bar icons are not displayed unless the media quirey is used*/
+  nav .fa{
+    display: none;
+  }
+  
