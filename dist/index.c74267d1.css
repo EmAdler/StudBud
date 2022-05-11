@@ -35,10 +35,6 @@ img {
   text-align: left;
 }
 
-section {
-  padding-left: 15%;
-}
-
 header {
   background-color: #63b891;
   padding: 5% 25%;
@@ -75,6 +71,22 @@ header {
 .single img {
   width: 30%;
   border-radius: 6px;
+}
+
+.search-box {
+  text-align: center;
+}
+
+input {
+  width: 25%;
+  border: .3px solid #585858;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+::placeholder {
+  color: #cecece;
+  font-style: italic;
 }
 
 footer {
@@ -124,10 +136,6 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
-}
-
-small, .text_small {
-  font-size: .8rem;
 }
 
 nav {
