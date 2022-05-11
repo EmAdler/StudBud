@@ -1,6 +1,5 @@
 .app-container {
     background-color: rgb(255, 255, 255);
-    padding-left: 15%;;
 
 }
 
@@ -11,15 +10,58 @@
     }
 }
 
+section{
+    padding-left: 15%;;
+}
+
+header{
+    background-color: #63B891;
+    padding-top:5%;
+    padding-bottom:5%;
+    padding-left:25%;
+    padding-right:25%;
+}
+
+
+/*HOME PAGE different pages descriptions - & responsive*/
+#pages{
+    width:100%;
+    padding:70px 0;
+    border-top: solid 2px #585858;
+    
+  }
+  #pages h3{
+    text-align: center;
+    padding-bottom: 5%;
+  }
+  
+  .box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:auto;
+  }
+  .single{
+    flex-basis: 22%;
+    text-align:center;
+    border-radius:6px;
+    margin-bottom: 20px;
+    color: black;
+    position: relative;
+  }
+  
+  .single img{
+    width:30%;
+    border-radius:6px;
+  }
+
+
 
 footer{
-    /* gap */
-    padding:2%;
-    /* background colour */
-    background-color:#19AABD;
-    /* white text to make it pop */
-    color: white;
-    /* borded section to make it standout */
-    border-top: solid 2px #585858;
-    border-bottom: solid 2px #585858;
+    background-color: #63B891;
+    padding: 1%;
+    padding-left:2%;
+    margin-top: 1%;
   }
+  

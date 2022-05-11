@@ -10,8 +10,7 @@
     align-items: center;
   }
   nav img{
-    width: 300px;
-    border-radius:6px;
+    width: 40%;
   }
  
    .nav-links{
@@ -19,7 +18,7 @@
     text-align: right;
   }
   
-   .nav-links ul li{
+   .nav-links li{
     list-style: none;
     display: inline;
     padding: 8px 12px;
@@ -38,13 +37,11 @@
      font-weight:bold;
   }
   
-  /* when the pages are hovered over the font weight increases*/
   
   a:hover {
    font-weight:bold;
   }
   
-  /* Nav bar icons are not displayed unless the media quirey is used*/
   nav .fa{
     display: none;
   }
