@@ -35,6 +35,11 @@ img {
   text-align: left;
 }
 
+section {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
 header {
   background-color: #63b891;
   padding: 5% 25%;
@@ -87,6 +92,10 @@ input {
 ::placeholder {
   color: #cecece;
   font-style: italic;
+}
+
+.cover img {
+  width: 30%;
 }
 
 footer {
