@@ -54,80 +54,6 @@ header {
   padding: 4%;
 }
 
-.textImage {
-  padding-top: 5%;
-  padding-bottom: 10%;
-}
-
-#text-left {
-  width: 40%;
-  float: left;
-}
-
-.features-img {
-  width: 40%;
-  float: right;
-}
-
-#pages {
-  width: 100%;
-  border-top: 2px solid #585858;
-  margin-top: 400px;
-  padding: 70px 0;
-}
-
-#pages h3 {
-  text-align: center;
-  padding-bottom: 5%;
-}
-
-.box {
-  width: 80%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: auto;
-  display: flex;
-}
-
-.single {
-  text-align: center;
-  color: #000;
-  border-radius: 6px;
-  flex-basis: 22%;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.single img {
-  width: 30%;
-  border-radius: 6px;
-}
-
-.search-box {
-  text-align: center;
-  height: 20%;
-}
-
-input {
-  width: 25%;
-  border: .3px solid #585858;
-  border-radius: 3px;
-  margin: 0 10px;
-}
-
-::placeholder {
-  color: #cecece;
-  font-style: italic;
-}
-
-.details {
-  width: 40%;
-  background-color: #dcdcdc;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding: 4%;
-}
-
 footer {
   background-color: #63b891;
   margin-top: 1%;
@@ -231,6 +157,10 @@ nav .fa {
   display: block;
 }
 
+#taskform input {
+  width: 100px;
+}
+
 #tasklist {
   grid-area: tasklist;
 }
@@ -332,6 +262,80 @@ nav .fa {
 
 .button-4:hover {
   box-shadow: inset 200px 0 #cdb3ce;
+}
+
+.textImage {
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+#text-left {
+  width: 40%;
+  float: left;
+}
+
+.features-img {
+  width: 40%;
+  float: right;
+}
+
+#pages {
+  width: 100%;
+  border-top: 2px solid #585858;
+  margin-top: 400px;
+  padding: 70px 0;
+}
+
+#pages h3 {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.box {
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  display: flex;
+}
+
+.single {
+  text-align: center;
+  color: #000;
+  border-radius: 6px;
+  flex-basis: 22%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.single img {
+  width: 30%;
+  border-radius: 6px;
+}
+
+.search-box {
+  text-align: center;
+  height: 20%;
+}
+
+input {
+  width: 25%;
+  border: .3px solid #585858;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+::placeholder {
+  color: #cecece;
+  font-style: italic;
+}
+
+.details {
+  width: 40%;
+  background-color: #dcdcdc;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */
