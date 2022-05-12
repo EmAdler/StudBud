@@ -544,7 +544,12 @@ function hideMenu() {
     navLinks.style.right = "-200px";
 }
 var taskList = new _tasklistDefault.default();
-taskList.printtoconsole();
+taskList.printtoconsole(); ///////dictionary - IN dictionary.js////////////
+ /////////timer///////////
+
+},{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx","./timer":"68qQu","./musicPlayer":"9ARnH"}],"iXFtG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 // Basic form DOM elements
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button");
@@ -624,12 +629,7 @@ function removeItemFromArray(arr, index) {
 function updateEmpty() {
     if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
     else document.getElementById('emptyList').style.display = 'block';
-} ///////dictionary - IN dictionary.js////////////
- /////////timer///////////
-
-},{"./tasklist":"iXFtG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./dictionary":"cRpLx","./timer":"68qQu","./musicPlayer":"9ARnH"}],"iXFtG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
+}
 class Tasklist {
     printtoconsole() {
         console.log('thisisfromthetasklistclass');
@@ -681,7 +681,7 @@ btn.addEventListener("click", ()=>{
         result.innerHTML = `
             <div class="word">
                     <h3>${inpWord}</h3>
-                    
+
                 </div>
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>

@@ -41,13 +41,38 @@ section {
 }
 
 header {
-  background-color: #63b891;
+  background-image: url("student-laptop-books.1fe58c59.jpg");
+  background-position: center;
+  background-size: cover;
   padding: 5% 25%;
+}
+
+.text-box {
+  background-color: #dcdcdc;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
+}
+
+.textImage {
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+#text-left {
+  width: 40%;
+  float: left;
+}
+
+.features-img {
+  width: 40%;
+  float: right;
 }
 
 #pages {
   width: 100%;
   border-top: 2px solid #585858;
+  margin-top: 400px;
   padding: 70px 0;
 }
 
@@ -80,6 +105,7 @@ header {
 
 .search-box {
   text-align: center;
+  height: 20%;
 }
 
 input {
@@ -94,8 +120,12 @@ input {
   font-style: italic;
 }
 
-.cover img {
-  width: 30%;
+.details {
+  width: 40%;
+  background-color: #dcdcdc;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
 }
 
 footer {
@@ -203,6 +233,25 @@ nav .fa {
 
 #tasklist {
   grid-area: tasklist;
+}
+
+#search-btn {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+#search-btn:hover {
+  box-shadow: inset 200px 0 #cdb3ce;
 }
 
 .button-1 {
