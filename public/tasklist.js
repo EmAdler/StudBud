@@ -58,7 +58,7 @@ function renderTask(task) {
     // Create HTML elements
     let item = document.createElement("li");
     item.setAttribute('data-id', task.id);
-    item.innerHTML = "<p>" + 'Task Name:' + ' ' + task.taskDescription + "</p>" + "<p>" + 'Due Date:'+ ' '+ task.dueDate + "</p>" + "<p>" + 'Completion Time:'+ ' '+ task.completionTime + "</p>" + "<p>" + 'Estimated Completion Time:'+ ' '+ task.estimatedTime + "</p>" ;
+    item.innerHTML = "<p>" + 'Task Name:' + ' ' + task.taskDescription + "</p>" + "<p>" + 'Due Date:'+ ' '+ task.dueDate + "</p>" + "<p>" + 'Completion Time:'+ ' '+ task.completionTime + "</p>" + "<p>" + 'Estimated Completion Time:'+ ' '+ task.estimatedTime + "</p>" + "<p>" + 'Completion status:'+ ' '+ task.completionStatus + "</p>" ;
 
     tasklist.appendChild(item);
 

@@ -165,6 +165,25 @@ nav .fa {
   grid-area: tasklist;
 }
 
+button {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+button:hover {
+  box-shadow: inset 200px 0 #98d6f0;
+}
+
 #search-btn {
   color: #fff;
   width: 150px;
@@ -323,6 +342,7 @@ input {
   border: .3px solid #585858;
   border-radius: 3px;
   margin: 0 10px;
+  padding: .5%;
 }
 
 ::placeholder {

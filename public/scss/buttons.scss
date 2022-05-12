@@ -1,4 +1,25 @@
 
+button{
+  background-color: gainsboro;
+  color: white;
+  border: 1px solid white; 
+  display: inline-block;
+  width: 150px;
+  padding-top: .5%;
+  padding-bottom:.5%;
+  border-radius: 6px;
+  font-size: 14px;
+  position:relative;
+  cursor: pointer;
+    transition: ease-out 0.2s;
+}
+
+
+button:hover{
+  box-shadow: inset 200px 0 0 0 #98D6F0;
+  }
+
+
 #search-btn{
   background-color: gainsboro;
   color: white;
