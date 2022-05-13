@@ -357,4 +357,9 @@ input {
   border-radius: 10px;
 }
 
+.timerDisplay {
+  padding-bottom: 2%;
+  font-size: 300%;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
