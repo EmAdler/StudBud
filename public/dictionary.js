@@ -27,10 +27,3 @@ btn.addEventListener("click", () => {
             result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
         });
 });
-
-class Dictionary{
-
-    
-}
-export default Dictionary;
-

@@ -1,0 +1,365 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap";
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.app-container {
+  background-color: #fff;
+}
+
+.page-container {
+  margin: 4em;
+}
+
+.page-container#home {
+  text-align: left;
+}
+
+section {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+header {
+  background-image: url("student-laptop-books.1fe58c59.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5% 25%;
+}
+
+.text-box {
+  background-color: #dcdcdc;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
+}
+
+footer {
+  background-color: #63b891;
+  margin-top: 1%;
+  padding: 1% 1% 1% 2%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #000;
+  background: #fff;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+header {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h4, h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 1%;
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+  display: flex;
+}
+
+nav img {
+  width: 40%;
+}
+
+.nav-links {
+  text-align: right;
+  flex: 1;
+}
+
+.nav-links li {
+  padding: 8px 12px;
+  list-style: none;
+  display: inline;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+nav .highlight, nav .current a, a:hover {
+  font-weight: bold;
+}
+
+nav .fa {
+  display: none;
+}
+
+#task-grid {
+  grid-template: "taskform tasklist" 1fr
+  / 1fr 1fr;
+  display: grid;
+}
+
+#taskform {
+  max-width: 300px;
+  grid-area: taskform;
+  margin: 0 auto;
+}
+
+#taskform label {
+  width: 100%;
+  display: block;
+}
+
+#taskform input {
+  width: 100px;
+}
+
+#tasklist {
+  grid-area: tasklist;
+}
+
+button {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+button:hover {
+  box-shadow: inset 200px 0 #98d6f0;
+}
+
+#search-btn {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+#search-btn:hover {
+  box-shadow: inset 200px 0 #cdb3ce;
+}
+
+.button-1 {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #63b891;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin-top: 3%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+.button-1:hover {
+  box-shadow: inset 200px 0 #98d6f0;
+}
+
+.button-2 {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #ffc533;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin-top: 3%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+.button-2:hover {
+  box-shadow: inset 200px 0 #63b891;
+}
+
+.button-3 {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #cdb3ce;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin-top: 3%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+.button-3:hover {
+  box-shadow: inset 200px 0 #ffc533;
+}
+
+.button-4 {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #98d6f0;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  margin-top: 3%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+.button-4:hover {
+  box-shadow: inset 200px 0 #cdb3ce;
+}
+
+.textImage {
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+#text-left {
+  width: 40%;
+  float: left;
+}
+
+.features-img {
+  width: 40%;
+  float: right;
+}
+
+#pages {
+  width: 100%;
+  border-top: 2px solid #585858;
+  margin-top: 400px;
+  padding: 70px 0;
+}
+
+#pages h3 {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.box {
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  display: flex;
+}
+
+.single {
+  text-align: center;
+  color: #000;
+  border-radius: 6px;
+  flex-basis: 22%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.single img {
+  width: 30%;
+  border-radius: 6px;
+}
+
+.search-box {
+  text-align: center;
+  height: 20%;
+}
+
+input {
+  width: 25%;
+  border: .3px solid #585858;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: .5%;
+}
+
+::placeholder {
+  color: #cecece;
+  font-style: italic;
+}
+
+.details {
+  width: 40%;
+  background-color: #dcdcdc;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.timerDisplay {
+  padding-bottom: 2%;
+  font-size: 300%;
+}
+
+/*# sourceMappingURL=index.c74267d1.css.map */

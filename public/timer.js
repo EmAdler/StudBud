@@ -2,7 +2,9 @@ let [milliseconds,seconds,minutes,hours] = [0,0,0,0];
 let timerRef = document.querySelector('.timerDisplay');
 let int = null;
 
+console.log()
 document.getElementById('startTimer').addEventListener('click', ()=>{
+    console.log('start timer pressed');
     if(int!==null){
         clearInterval(int);
     }
@@ -10,10 +12,12 @@ document.getElementById('startTimer').addEventListener('click', ()=>{
 });
 
 document.getElementById('pauseTimer').addEventListener('click', ()=>{
+    console.log('paused timer pressed');
     clearInterval(int);
 });
 
 document.getElementById('resetTimer').addEventListener('click', ()=>{
+    console.log('reset timer pressed');
     clearInterval(int);
     [milliseconds,seconds,minutes,hours] = [0,0,0,0];
     timerRef.innerHTML = '00 : 00 : 00 : 000 ';
@@ -41,8 +45,3 @@ function displayTimer(){
 
  timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
 }
-class Timer{
-
-    
-}
-export default Timer;

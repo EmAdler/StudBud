@@ -1,7 +1,7 @@
-import Tasklist from "./tasklist";
-import Dictionary from "./dictionary";
-import Timer from "./timer";
-import Musicplayer from "./musicPlayer";
+//import "./tasklist";
+//import "./dictionary";
+import  "./timer";
+//import "./musicPlayer";
 
 
 ///navigation///
@@ -15,11 +15,6 @@ function hideMenu(){
   navLinks.style.right = "-200px";
   
 }
-
-
-var taskList = new Tasklist();
-taskList.printtoconsole();
-
 
 ///////dictionary - IN dictionary.js////////////
 
