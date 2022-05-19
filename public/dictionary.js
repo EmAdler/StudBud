@@ -1,8 +1,8 @@
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
-const btn = document.getElementById("search-btn");
+const searchbutton = document.getElementById("searchbutton");
 
-btn.addEventListener("click", () => {
+searchbutton.addEventListener("click",  () => {
     let inpWord = document.getElementById("inp-word").value;
     fetch(`${url}${inpWord}`)
         .then((response) => response.json())

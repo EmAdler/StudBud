@@ -1,7 +1,7 @@
-//import "./tasklist";
-//import "./dictionary";
+import "./tasklist";
+import "./dictionary";
 import  "./timer";
-//import "./musicPlayer";
+import "./musicPlayer";
 
 
 ///navigation///
