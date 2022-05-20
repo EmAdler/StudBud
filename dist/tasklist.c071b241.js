@@ -44,11 +44,21 @@ function addTask(taskDescription, dueDate, estimatedTime, priorityRating, comple
 function renderTask(task1) {
     // Call function - checks if a task has been added
     updateEmpty();
+    //new section 
+    let taskDiv = document.createElement("div");
+    taskDiv.setAttribute("style", "background-color: blue;");
+    taskDiv.setAttribute("draggable", "true");
+    taskDiv.setAttribute("ondragstart", "onDragStart(event);");
+    taskDiv.setAttribute("id", task1.id);
+    //class ="example-draggable"
+    // draggable="true"
+    // ondragstart="onDragStart(event);"
     // Create HTML elements
     let item = document.createElement("li");
     item.setAttribute('data-id', task1.id);
     item.innerHTML = "<p>Task Name: " + task1.taskDescription + "</p>" + "<p>" + 'Due Date:' + ' ' + task1.dueDate + "</p>" + "<p>" + 'Completion Time:' + ' ' + task1.completionTime + "</p>" + "<p>" + 'Estimated Completion Time:' + ' ' + task1.estimatedTime + "</p>";
-    tasklist.appendChild(item);
+    taskDiv.appendChild(item);
+    tasklist.appendChild(taskDiv);
     // Extra Task DOM elements
     let delButton = document.createElement("button");
     let delButtonText = document.createTextNode("Delete Task");
@@ -77,6 +87,21 @@ function removeItemFromArray(arr, index) {
 function updateEmpty() {
     if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
     else document.getElementById('emptyList').style.display = 'block';
+}
+////new drag and drop section////
+function onDragStart(event) {
+    event.dataTransfer.setData('text/plain', event.target.id);
+}
+function onDragOver(event) {
+    event.preventDefault();
+}
+function onDrop(event) {
+    const id = event.dataTransfer.getData('text');
+    const draggableElement = document.getElementById(id);
+    const dropzone = event.target;
+    console.log(event.target);
+    dropzone.appendChild(draggableElement);
+    event.dataTransfer.clearData();
 }
 
 //# sourceMappingURL=tasklist.c071b241.js.map

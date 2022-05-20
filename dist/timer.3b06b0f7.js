@@ -526,10 +526,7 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"2OD7o":[function(require,module,exports) {
-var _tasklist = require("./tasklist");
-var _dictionary = require("./dictionary"); //import  "./timer";
- //import "./musicPlayer";
 
-},{"./tasklist":"iXFtG","./dictionary":"cRpLx"}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire60da")
+},{}]},["2xDT7","2OD7o"], "2OD7o", "parcelRequire60da")
 
 //# sourceMappingURL=timer.3b06b0f7.js.map

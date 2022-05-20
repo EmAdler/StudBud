@@ -165,6 +165,10 @@ nav .fa {
   grid-area: tasklist;
 }
 
+.example-origin {
+  background-color: #98d6f0;
+}
+
 button {
   color: #fff;
   width: 150px;

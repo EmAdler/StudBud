@@ -54,12 +54,26 @@ function renderTask(task) {
     // Call function - checks if a task has been added
     updateEmpty();
 
+
+  //new section 
+
+  let taskDiv = document.createElement("div");
+  taskDiv.setAttribute("style","background-color: blue;");
+  taskDiv.setAttribute("draggable", "true");
+  taskDiv.setAttribute("ondragstart", "onDragStart(event);");
+    taskDiv.setAttribute("id", task.id);
+  //class ="example-draggable"
+      // draggable="true"
+      // ondragstart="onDragStart(event);"
+
+  
     // Create HTML elements
     let item = document.createElement("li");
     item.setAttribute('data-id', task.id);
     item.innerHTML = "<p>" + 'Task Name:' + ' ' + task.taskDescription + "</p>" + "<p>" + 'Due Date:'+ ' '+ task.dueDate + "</p>" + "<p>" + 'Completion Time:'+ ' '+ task.completionTime + "</p>" + "<p>" + 'Estimated Completion Time:'+ ' '+ task.estimatedTime + "</p>" ;
-
-    tasklist.appendChild(item);
+    taskDiv.appendChild(item);
+    tasklist.appendChild(taskDiv);
+  
 
     // Extra Task DOM elements
     let delButton = document.createElement("button");
@@ -99,4 +113,29 @@ function updateEmpty() {
     } else {
         document.getElementById('emptyList').style.display = 'block';
     }
+}
+
+
+////new drag and drop section////
+function onDragStart(event) {
+  event
+    .dataTransfer
+    .setData('text/plain', event.target.id);
+}
+
+function onDragOver(event) {
+  event.preventDefault();
+}
+
+function onDrop(event) {
+  const id = event
+    .dataTransfer
+    .getData('text');
+    const draggableElement = document.getElementById(id);
+  const dropzone = event.target;
+  console.log(event.target);
+  dropzone.appendChild(draggableElement);
+event
+    .dataTransfer
+    .clearData();
 }
