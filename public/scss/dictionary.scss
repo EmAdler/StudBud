@@ -21,11 +21,51 @@
   }
 
 
+  .content{
+    background-color: aqua;
+    text-align: center;
+padding-left:28%;
+padding-top:5%;
+padding-bottom:5%;
+  }
+
+.word{
+  font-size:10%;
+  width:60%;
+  background-color: gainsboro;
+border-radius:10px ;
+border: solid 2px white;
+text-align: center;
+padding: 2%;
+
+}
 
   .details{
-    width:40%;
+    width:60%;
     background-color: gainsboro;
   border-radius:10px ;
   border: solid 2px white;
+  text-align: center;
+  margin-top: 2%;
+  padding: 2%;
+  }
+
+  .word-meaning{
+    width:60%;
+    background-color: gainsboro;
+  border-radius:10px ;
+  border: solid 2px white;
+  text-align: center;
+  margin-top: 2%;
+  padding: 2%;
+  }
+  .word-example{
+    width:60%;
+    background-color: gainsboro;
+  border-radius:10px ;
+  border: solid 2px white;
+  text-align: center;
+  margin-top: 2%;
+  padding: 2%;
   }
 

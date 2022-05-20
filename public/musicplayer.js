@@ -4,10 +4,7 @@ const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
 const audio = document.getElementById('audio');
-const progress = document.getElementById('progress');
-const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
-const cover = document.getElementById('cover');
 
 // Song titles
 const songs = ['forest-lullaby', 'chill-abstract', 'the-cradle'];
@@ -21,8 +18,7 @@ loadSong(songs[songIndex]);
 // Update song details
 function loadSong(song) {
     title.innerHTML = song;
-    audio.src = `./audio/${song}.mp3`;
-    cover.src = `./images/${song}.jpg`;
+    audio.src = `audio/${song}.mp3`;
 }
 
 // play song
@@ -62,21 +58,6 @@ function nextSong() {
     playSong();
 }
 
-// update progress bar 
-function updateProgress(e) {
-    const { duration, currentTime } = e.srcElement;
-    const progressPercent = (currentTime / duration) * 100;
-    progress.style.width = `${progressPercent}%`;
-}
-
-// Set progress bar
-function setProgress(e) {
-    const width = this.clientWidth;
-    const clickX = e.offsetX;
-    const duration = audio.duration;
-
-    audio.currentTime = clickX / width * duration;
-}
 
 // Event listeners
 playBtn.addEventListener('click', () => {
@@ -92,12 +73,6 @@ playBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', prevSong)
 nextBtn.addEventListener('click', nextSong)
 
-
-// Time/song update event
-audio.addEventListener('timeupdate', updateProgress);
-
-// click on progress bar
-progressContainer.addEventListener('click', setProgress);
 
 // song ends
 audio.addEventListener('ended', nextSong);

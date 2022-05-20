@@ -8,9 +8,10 @@ searchbutton.addEventListener("click",  () => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            result.innerHTML = `
+            result.innerHTML = ` 
+            <div class = "content">
             <div class="word">
-                    <h3>${inpWord}</h3>
+                    <h5> Word Searched: ${inpWord}</h5>
                 </div>
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
@@ -21,7 +22,8 @@ searchbutton.addEventListener("click",  () => {
                 </p>
                 <p class="word-example">
                     ${data[0].meanings[0].definitions[0].example || ""}
-                </p>`;
+                </p>
+                </div>`;
         })
         .catch(() => {
             result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;

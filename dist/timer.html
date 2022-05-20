@@ -26,24 +26,33 @@
             <h2>Timer</h2>
                 <p>Set your timer to your allocated work time to ensure productivity</p>
                   <!-- FIGURE OUT HOW TO ADD A STOP WATCH -->
-
-                  <div class="container">
-                    <div class="timerDisplay">
-                      00 : 00 : 00 : 000
-                   </div>
-                     <div class="buttons">
-                     <button id="startTimer">Start</button>
-                      <button id="pauseTimer">Pause</button>
-                     <button id="resetTimer">Reset</button>
-                   </div>
-          </div>
+                  <div id="pomodoro-app">
+                    <div id="container">
+                      <div id="timer">
+                        <div id="time">
+                          <span id="minutes">30</span>
+                          <span id="colon">:</span>
+                          <span id="seconds">00</span>
+                        </div>
+                        <div id="filler"></div>
+                      </div>
+                  
+                      
+                    </div>
+                  </div>
         </div></header>
 
     <section>
         <h3>Ready to Go Timers</h3>
         <p>Click the times below that you prefer for quick timer</p>
          <!-- FIGURE OUT HOW TO LINK BUTTONS TO MAKE THE TIMER WORK -->
-       
+         <div id="buttons">
+          <button id="work">30 min Work</button>
+           <button id="extendedWork">1 hour Work</button>
+          <button id="shortBreak">5 min Break</button>
+          <button id="longBreak">15 min break</button>
+          <button id="stop">Stop</button>
+        </div>
     </section>
 
 
@@ -51,7 +60,7 @@
     <p>Copyright © 2022 STUDbud</p>
   </footer>
   
-  <script src="/timer.3b06b0f7.js" defer="">
+  <script src="/timer.f565f920.js">
 </script>
 </body>
 
