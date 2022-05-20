@@ -165,8 +165,14 @@ nav .fa {
   grid-area: tasklist;
 }
 
-.example-origin {
+#draganddrop {
   background-color: #98d6f0;
+  padding: 10%;
+}
+
+.box-1 {
+  border: 1px solid #000;
+  margin: 2%;
 }
 
 button {
