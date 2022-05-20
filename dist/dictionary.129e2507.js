@@ -9,17 +9,16 @@ searchbutton.addEventListener("click", ()=>{
         result.innerHTML = ` 
             <div class = "content">
             <div class="word">
-                    <h5> Word Searched: ${inpWord}</h5>
+                    <h5> <strong>Word Searched:</strong> ${inpWord}</h5>
                 </div>
                 <div class="details">
-                    <p>${data[0].meanings[0].partOfSpeech}</p>
-                    <p>/${data[0].phonetic}/</p>
+                    <p> <strong>Word Type:</strong> ${data[0].meanings[0].partOfSpeech}</p>
                 </div>
                 <p class="word-meaning">
-                   ${data[0].meanings[0].definitions[0].definition}
+                <strong> Meaning: </strong>${data[0].meanings[0].definitions[0].definition}
                 </p>
                 <p class="word-example">
-                    ${data[0].meanings[0].definitions[0].example || ""}
+                <strong>Examples:</strong> ${data[0].meanings[0].definitions[0].example || ""}
                 </p>
                 </div>`;
     }).catch(()=>{

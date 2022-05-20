@@ -44,7 +44,7 @@ function addTask(taskDescription, dueDate, estimatedTime, priorityRating, comple
 function renderTask(task1) {
     // Call function - checks if a task has been added
     updateEmpty();
-    //new section 
+    //new section
     let taskDiv = document.createElement("div");
     taskDiv.setAttribute("style", "background-color: pink;");
     taskDiv.setAttribute("draggable", "true");
@@ -55,8 +55,8 @@ function renderTask(task1) {
     // ondragstart="onDragStart(event);"
     // Create HTML elements
     let item = document.createElement("li");
-    item.setAttribute('data-id', task1.id);
-    item.innerHTML = "<p>Task Name: " + task1.taskDescription + "</p>" + "<p>" + 'Due Date:' + ' ' + task1.dueDate + "</p>" + "<p>" + 'Completion Time:' + ' ' + task1.completionTime + "</p>" + "<p>" + 'Estimated Completion Time:' + ' ' + task1.estimatedTime + "</p>";
+    item.setAttribute("data-id", task1.id);
+    item.innerHTML = "<p>Task Name: " + task1.taskDescription + "</p>" + "<p>" + "Due Date:" + " " + task1.dueDate + "</p>" + "<p>" + "Completion Time:" + " " + task1.completionTime + "</p>" + "<p>" + "Estimated Completion Time:" + " " + task1.estimatedTime + "</p>";
     taskDiv.appendChild(item);
     tasklist.appendChild(taskDiv);
     // Extra Task DOM elements
@@ -67,7 +67,7 @@ function renderTask(task1) {
     // Event Listeners for DOM elements
     delButton.addEventListener("click", function(event) {
         event.preventDefault();
-        let id = event.target.parentElement.getAttribute('data-id');
+        let id = event.target.parentElement.getAttribute("data-id");
         let index = taskListArray.findIndex((task)=>task.id === Number(id)
         );
         removeItemFromArray(taskListArray, index);
@@ -85,18 +85,18 @@ function removeItemFromArray(arr, index) {
 }
 // Function to hide the 'you haven't added any tasks' text
 function updateEmpty() {
-    if (taskListArray.length > 0) document.getElementById('emptyList').style.display = 'none';
-    else document.getElementById('emptyList').style.display = 'block';
+    if (taskListArray.length > 0) document.getElementById("emptyList").style.display = "none";
+    else document.getElementById("emptyList").style.display = "block";
 }
 ////new drag and drop section////
 function onDragStart(event) {
-    event.dataTransfer.setData('text/plain', event.target.id);
+    event.dataTransfer.setData("text/plain", event.target.id);
 }
 function onDragOver(event) {
     event.preventDefault();
 }
 function onDrop(event) {
-    const id = event.dataTransfer.getData('text');
+    const id = event.dataTransfer.getData("text");
     const draggableElement = document.getElementById(id);
     const dropzone = event.target;
     console.log(event.target);

@@ -10,25 +10,25 @@ var pomodoro = {
     fillerDom: null,
     init: function() {
         var self = this;
-        this.minutesDom = document.querySelector('#minutes');
-        this.secondsDom = document.querySelector('#seconds');
-        this.fillerDom = document.querySelector('#filler');
+        this.minutesDom = document.querySelector("#minutes");
+        this.secondsDom = document.querySelector("#seconds");
+        this.fillerDom = document.querySelector("#filler");
         this.interval = setInterval(function() {
             self.intervalCallback.apply(self);
         }, 1000);
-        document.querySelector('#work').onclick = function() {
+        document.querySelector("#work").onclick = function() {
             self.startWork.apply(self);
         };
-        document.querySelector('#extendedWork').onclick = function() {
+        document.querySelector("#extendedWork").onclick = function() {
             self.startExtendedWork.apply(self);
         };
-        document.querySelector('#shortBreak').onclick = function() {
+        document.querySelector("#shortBreak").onclick = function() {
             self.startShortBreak.apply(self);
         };
-        document.querySelector('#longBreak').onclick = function() {
+        document.querySelector("#longBreak").onclick = function() {
             self.startLongBreak.apply(self);
         };
-        document.querySelector('#stop').onclick = function() {
+        document.querySelector("#stop").onclick = function() {
             self.stopTimer.apply(self);
         };
     },
@@ -63,7 +63,7 @@ var pomodoro = {
         this.minutesDom.innerHTML = this.toDoubleDigit(this.minutes);
         this.secondsDom.innerHTML = this.toDoubleDigit(this.seconds);
         this.fillerHeight = this.fillerHeight + this.fillerIncrement;
-        this.fillerDom.style.height = this.fillerHeight + 'px';
+        this.fillerDom.style.height = this.fillerHeight + "px";
     },
     intervalCallback: function() {
         if (!this.started) return false;
