@@ -397,8 +397,8 @@ button:hover {
 
 .search-box {
   text-align: center;
-  height: 20%;
-  padding-bottom: 5%;
+  height: 7%;
+  padding-bottom: 2%;
 }
 
 input {
@@ -451,6 +451,11 @@ input {
   border: 2px solid #fff;
   border-radius: 10px;
   padding: 4%;
+}
+
+#purplediv {
+  background-color: #cdb3ce;
+  padding: .4%;
 }
 
 .text-box-green {
