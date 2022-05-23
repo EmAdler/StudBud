@@ -3,7 +3,7 @@
 .search-box{
     text-align: center;
     height: 20%;
-    
+    padding-bottom: 5%;
   }
   input {
     margin: 0 10px;
@@ -22,7 +22,7 @@
 
 
   .content{
-    background-color: aqua;
+    background-color: #CDB3CE;
     text-align: center;
 padding-left:28%;
 padding-top:5%;
@@ -69,3 +69,16 @@ padding: 2%;
   padding: 2%;
   }
 
+
+
+#emptyList{
+text-align: center;
+}
+
+
+.text-box-purple{
+  background-color: #CDB3CE;
+  border-radius:10px ;
+  border: solid 2px white;
+  padding: 4%;
+}

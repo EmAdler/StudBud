@@ -25,5 +25,9 @@ searchbutton.addEventListener("click", ()=>{
         result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
     });
 });
+function updateEmpty() {
+    if (dictionary.length > 0) document.getElementById("emptyList").style.display = "none";
+    else document.getElementById("emptyList").style.display = "block";
+}
 
 //# sourceMappingURL=dictionary.129e2507.js.map

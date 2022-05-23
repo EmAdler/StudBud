@@ -27,6 +27,14 @@ header{
 }
 
 
+footer{
+    background-color: white;
+    padding:1%;
+    padding-left:4%;
+    border: 1px solid black; 
+
+    }
+
 .text-box{
 background-color: gainsboro;
   border-radius:10px ;
@@ -35,12 +43,3 @@ background-color: gainsboro;
   
 }
 
-
-/*FOOTER*/
-
-footer{
-    background-color: #63B891;
-    padding: 1%;
-    padding-left:2%;
-    margin-top: 1%;
-  }

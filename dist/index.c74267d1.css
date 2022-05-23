@@ -47,17 +47,17 @@ header {
   padding: 5% 25%;
 }
 
+footer {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 1% 1% 1% 4%;
+}
+
 .text-box {
   background-color: #dcdcdc;
   border: 2px solid #fff;
   border-radius: 10px;
   padding: 4%;
-}
-
-footer {
-  background-color: #63b891;
-  margin-top: 1%;
-  padding: 1% 1% 1% 2%;
 }
 
 html {
@@ -183,6 +183,13 @@ nav .fa {
   padding: 5% 2%;
 }
 
+.text-box-blue {
+  background-color: #98d6f0;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
+}
+
 button {
   color: #fff;
   width: 150px;
@@ -200,6 +207,44 @@ button {
 
 button:hover {
   box-shadow: inset 200px 0 #98d6f0;
+}
+
+.buttonGG {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+.buttonGG:hover {
+  box-shadow: inset 200px 0 #63b891;
+}
+
+#searchbutton {
+  color: #fff;
+  width: 150px;
+  cursor: pointer;
+  background-color: #dcdcdc;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-size: 14px;
+  transition: all .2s ease-out;
+  display: inline-block;
+  position: relative;
+}
+
+#searchbutton:hover {
+  box-shadow: inset 200px 0 #cdb3ce;
 }
 
 #search-btn {
@@ -353,6 +398,7 @@ button:hover {
 .search-box {
   text-align: center;
   height: 20%;
+  padding-bottom: 5%;
 }
 
 input {
@@ -370,7 +416,7 @@ input {
 
 .content {
   text-align: center;
-  background-color: #0ff;
+  background-color: #cdb3ce;
   padding-top: 5%;
   padding-bottom: 5%;
   padding-left: 28%;
@@ -396,9 +442,37 @@ input {
   padding: 2%;
 }
 
+#emptyList {
+  text-align: center;
+}
+
+.text-box-purple {
+  background-color: #cdb3ce;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
+}
+
+.text-box-green {
+  background-color: #63b891;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
+}
+
 #time {
   padding-bottom: 2%;
   font-size: 300%;
+}
+
+#buttons {
+  text-align: center;
+  padding: 2%;
+}
+
+#greendiv {
+  background-color: #63b891;
+  padding: .4%;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */
