@@ -46,13 +46,10 @@ function renderTask(task1) {
     updateEmpty();
     //new section
     let taskDiv = document.createElement("div");
-    taskDiv.setAttribute("style", "background-color: pink;");
+    taskDiv.setAttribute("style", "background-color: gainsboro;");
     taskDiv.setAttribute("draggable", "true");
     taskDiv.setAttribute("ondragstart", "onDragStart(event);");
     taskDiv.setAttribute("id", task1.id);
-    //class ="example-draggable"
-    // draggable="true"
-    // ondragstart="onDragStart(event);"
     // Create HTML elements
     let item = document.createElement("li");
     item.setAttribute("data-id", task1.id);

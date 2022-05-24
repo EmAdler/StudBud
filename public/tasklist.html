@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>StudBud</title>
     <link href="scss/main.scss" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 
 <body class="app-container">
@@ -71,8 +72,7 @@
 </section>
 
 <section id='draganddrop'
-
-    <h1>Grouping your tasks</h1>
+    <h1 id = "subheading">Grouping your tasks</h1>
   <div class="example-parent">
     
   <div 
@@ -95,6 +95,15 @@
    ondrop="onDrop(event);"
  > <h5>Box 3</h5>
   </div>
+
+  <div 
+  class="box-1"
+  ondragover="onDragOver(event);"
+  ondrop="onDrop(event);"
+> <h5>Box 4</h5>
+ </div>
+
+ 
 </div>
 </section>
 
