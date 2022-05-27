@@ -100,5 +100,10 @@ function onDrop(event) {
     dropzone.appendChild(draggableElement);
     event.dataTransfer.clearData();
 }
+///adding text to coloumn heading //
+var box1 = document.getElementById('box-1');
+box1.onclick = function() {
+    console.log('clickbox1');
+};
 
 //# sourceMappingURL=tasklist.c071b241.js.map
