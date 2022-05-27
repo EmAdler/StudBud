@@ -18,14 +18,15 @@ loadSong(songs[songIndex]);
 // Update song details
 function loadSong(song) {
     title.innerHTML = song;
-    audio.src = `audio/${song}.mp3`;
+   // audio.src = `./audio/${song}.mp3`;
+    console.log(audio.src);
 }
 
 // play song
 function playSong() {
-    musicContainer.classList.add('play');
-    playBtn.querySelector('i.fas').classList.remove('fa-play');
-    playBtn.querySelector('i.fas').classList.add('fa-pause');
+  musicContainer.classList.add('play');
+   playBtn.querySelector('i.fas').classList.remove('fa-play');
+   playBtn.querySelector('i.fas').classList.add('fa-pause');
     audio.play();
 }
 
@@ -59,14 +60,16 @@ function nextSong() {
 }
 
 
+
 // Event listeners
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", function(){
     const isPlaying = musicContainer.classList.contains('play');
     if(isPlaying) {
         pauseSong();
     } else {
         playSong();
     }
+   
 });
 
 //change songs
