@@ -58,7 +58,7 @@ function renderTask(task1) {
     tasklist.appendChild(taskDiv);
     // Extra Task DOM elements
     let delButton = document.createElement("button");
-    let delButtonText = document.createTextNode("Delete Task");
+    let delButtonText = document.createTextNode("Complete/Delete Task");
     delButton.appendChild(delButtonText);
     item.appendChild(delButton);
     // Event Listeners for DOM elements
