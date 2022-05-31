@@ -487,4 +487,11 @@ input {
   text-align: center;
 }
 
+.text-box-yellow {
+  background-color: #ffc533;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4%;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
