@@ -1,5 +1,14 @@
 /*DICTIONARY PAGE*/
 
+.dictionaryheader{
+  background-image: url(../images/forest.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top:5%;
+  padding-bottom:5%;
+  padding-left:25%;
+  padding-right:25%;
+}
 .search-box{
     text-align: center;
     height: 7%;
@@ -89,4 +98,8 @@ text-align: center;
   background-color: #CDB3CE;
 }
 
+#whitediv{
+  padding:.5%;
+  background-color: white;
+}
 

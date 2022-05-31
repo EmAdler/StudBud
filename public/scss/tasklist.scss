@@ -1,3 +1,13 @@
+.tasklistheader{
+    background-image: url(../images/girlstudy.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top:5%;
+    padding-bottom:5%;
+    padding-left:25%;
+    padding-right:25%;
+  }
+
 #task-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

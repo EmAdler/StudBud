@@ -40,13 +40,6 @@ section {
   padding-right: 15%;
 }
 
-header {
-  background-image: url("student-laptop-books.1fe58c59.jpg");
-  background-position: center;
-  background-size: cover;
-  padding: 5% 25%;
-}
-
 footer {
   background-color: #fff;
   border-top: 1px solid #dcdcdc;
@@ -139,6 +132,13 @@ nav .highlight, nav .current a, a:hover {
 
 nav .fa {
   display: none;
+}
+
+.tasklistheader {
+  background-image: url("girlstudy.6de88b06.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5% 25%;
 }
 
 #task-grid {
@@ -349,26 +349,23 @@ button:hover {
   box-shadow: inset 200px 0 #cdb3ce;
 }
 
-.textImage {
-  padding-top: 5%;
-  padding-bottom: 10%;
+.homepageheader {
+  background-image: url("student-laptop-books.1fe58c59.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5% 25%;
 }
 
-#text-left {
-  width: 40%;
-  float: left;
+#textinfo {
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 2%;
+  padding-bottom: 5%;
 }
 
 .features-img {
   width: 40%;
   float: right;
-}
-
-#pages {
-  width: 100%;
-  border-top: 2px solid #585858;
-  margin-top: 400px;
-  padding: 70px 0;
 }
 
 #pages h3 {
@@ -396,6 +393,18 @@ button:hover {
 .single img {
   width: 30%;
   border-radius: 6px;
+}
+
+#greydiv {
+  background-color: #dcdcdc;
+  padding: .4%;
+}
+
+.dictionaryheader {
+  background-image: url("forest.d06e499e.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5% 25%;
 }
 
 .search-box {
@@ -461,6 +470,18 @@ input {
   padding: .4%;
 }
 
+#whitediv {
+  background-color: #fff;
+  padding: .5%;
+}
+
+.timerheader {
+  background-image: url("beach.ce60d60e.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5% 25%;
+}
+
 .text-box-green {
   background-color: #63b891;
   border: 2px solid #fff;
@@ -483,8 +504,22 @@ input {
   padding: .4%;
 }
 
+.musicplayerheader {
+  background-image: url("mountains.0b31b1bb.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5% 25%;
+}
+
 .listofsongs {
+  width: 60%;
   text-align: center;
+  background-color: #dcdcdc;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-left: 20%;
+  padding: 2%;
 }
 
 .text-box-yellow {
@@ -492,6 +527,20 @@ input {
   border: 2px solid #fff;
   border-radius: 10px;
   padding: 4%;
+}
+
+.title {
+  text-align: center;
+}
+
+#yellowdiv {
+  background-color: #ffc533;
+  padding: .4%;
+}
+
+#whitediv {
+  background-color: #fff;
+  padding: .5%;
 }
 
 /*# sourceMappingURL=index.c74267d1.css.map */

@@ -1,16 +1,29 @@
 
+.homepageheader{
+  background-image: url(../images/student-laptop-books.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top:5%;
+  padding-bottom:5%;
+  padding-left:25%;
+  padding-right:25%;
+}
+
+
 /*HOME PAGE 2nd section*/
 /*FUGURE OUT HOW TO SPLIT THE TEXT AND IMAGE*/
 
-.textImage{
-    padding-top: 5%;
-    padding-bottom:10%;
- }
  
- #text-left{
-     width:40%;
-     float: left;
+ #textinfo{
+     width:60%;
+     padding-top:2%;
+     padding-bottom:5%;
+     margin-left:20%;
+    
+
  }
+
+ 
  
  .features-img{
      width:40%;
@@ -19,13 +32,7 @@
  
  /*HOME PAGE different pages descriptions - & responsive*/
  
- #pages{
-     margin-top: 400px;
-     width:100%;
-     padding:70px 0;
-     border-top: solid 2px #585858;
-     
-   }
+ 
    #pages h3{
      text-align: center;
      padding-bottom: 5%;
@@ -53,3 +60,9 @@
      border-radius:6px;
    }
  
+
+#greydiv{
+    padding:.4%;
+    background-color: gainsboro;
+}
+
