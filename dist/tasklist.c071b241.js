@@ -46,7 +46,7 @@ function renderTask(task1) {
     updateEmpty();
     //new section
     let taskDiv = document.createElement("div");
-    taskDiv.setAttribute("style", "background-color: gainsboro;");
+    taskDiv.setAttribute("style", "background-color: lightgray; padding: 10%;   border-radius:10px; border: solid .5px black;");
     taskDiv.setAttribute("draggable", "true");
     taskDiv.setAttribute("ondragstart", "onDragStart(event);");
     taskDiv.setAttribute("id", task1.id);

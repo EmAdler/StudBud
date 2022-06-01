@@ -70,7 +70,7 @@ function renderTask(task) {
   //new section
 
   let taskDiv = document.createElement("div");
-  taskDiv.setAttribute("style", "background-color: gainsboro;");
+  taskDiv.setAttribute("style", "background-color: lightgray; padding: 10%;   border-radius:10px; border: solid .5px black;");
   taskDiv.setAttribute("draggable", "true");
   taskDiv.setAttribute("ondragstart", "onDragStart(event);");
   taskDiv.setAttribute("id", task.id);
@@ -163,6 +163,5 @@ function onDrop(event) {
 ///adding text to coloumn heading //
 var box1 = document.getElementById('box-1');
 box1.onclick = function (){
-  
   console.log('clickbox1');
 }

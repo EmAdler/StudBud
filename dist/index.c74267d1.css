@@ -97,6 +97,11 @@ h5 {
   font-size: 1.25rem;
 }
 
+h6 {
+  text-align: center;
+  font-size: .75rem;
+}
+
 nav {
   justify-content: space-between;
   align-items: center;
